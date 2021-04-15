@@ -1,9 +1,10 @@
 import React from 'react'
+import * as bsIcons from "react-icons/bs";
 
 const StarRating = () => {
     return (
         <div>
-            star
+            <bsIcons.BsFillStarFill size="50"/>
         </div>
     )
 }
