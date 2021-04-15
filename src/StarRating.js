@@ -11,7 +11,11 @@ const StarRating = () => {
                 return(
                     <label>
                     <input type="radio" name="rating"></input>
-                    <bsIcons.BsFillStarFill className="star" size="100" value={ratingValue}/>
+                    <bsIcons.BsFillStarFill 
+                        className="star" 
+                        size="100" 
+                        value={ratingValue} 
+                        onClick={() => setRating(ratingValue)}/>
                   </label>
                 )
               
