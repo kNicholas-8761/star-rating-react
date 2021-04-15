@@ -10,12 +10,17 @@ const StarRating = () => {
                 const ratingValue = index + 1;
                 return(
                     <label>
-                    <input type="radio" name="rating"></input>
+                    <input 
+                        type="radio" 
+                        name="rating"
+                        value={ratingValue} 
+                        onClick={() => setRating(ratingValue)}
+                        />
                     <bsIcons.BsFillStarFill 
                         className="star" 
                         size="100" 
-                        value={ratingValue} 
-                        onClick={() => setRating(ratingValue)}/>
+                        color={ratingValue <= rating ? "#ffc107" : "#e4e5e9" }
+                        />
                   </label>
                 )
               
