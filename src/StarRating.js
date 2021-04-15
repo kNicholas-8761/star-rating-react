@@ -16,12 +16,13 @@ const StarRating = () => {
                         name="rating"
                         value={ratingValue} 
                         onClick={() => setRating(ratingValue)}
-                        
                         />
                     <bsIcons.BsFillStarFill 
                         className="star" 
                         size="100" 
-                        color={ratingValue <= rating ? "#ffc107" : "#e4e5e9" }
+                        color={ratingValue <= (rating || hover)? "#ffc107" : "#e4e5e9" }
+                        onMouseEnter ={() => setHover(ratingValue)}
+                        onMouseLeave ={() => setHover(null)}
                         />
                   </label>
                 )
@@ -33,6 +34,7 @@ const StarRating = () => {
 
 
 export default StarRating
+                        
 
 
             
