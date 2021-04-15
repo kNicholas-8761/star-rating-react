@@ -4,9 +4,13 @@ import * as bsIcons from "react-icons/bs";
 const StarRating = () => {
     return (
         <div>
-            <bsIcons.BsFillStarFill size="50"/>
+            {[...Array(5)].map( star =>{
+                return <bsIcons.BsFillStarFill size="100"/>
+            })}
         </div>
     )
 }
 
 export default StarRating
+
+            
