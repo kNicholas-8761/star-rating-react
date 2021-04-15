@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 import * as bsIcons from "react-icons/bs";
 import './App.css'
 
 const StarRating = () => {
+    const [rating, setRating] = useState(null)
     return (
         <div>
             {[...Array(5)].map((star,index) =>{
