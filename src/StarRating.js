@@ -1,14 +1,16 @@
 import React from 'react'
 import * as bsIcons from "react-icons/bs";
+import './App.css'
 
 const StarRating = () => {
     return (
         <div>
-            {[...Array(5)].map( star =>{
+            {[...Array(5)].map((star,index) =>{
+                const ratingValue = index + 1;
                 return(
                     <label>
                     <input type="radio" name="rating"></input>
-                    <bsIcons.BsFillStarFill size="100"/>
+                    <bsIcons.BsFillStarFill className="star" size="100" value={ratingValue}/>
                   </label>
                 )
               
@@ -16,6 +18,7 @@ const StarRating = () => {
         </div>
     )
 }
+
 
 export default StarRating
 
