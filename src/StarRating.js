@@ -4,6 +4,7 @@ import './App.css'
 
 const StarRating = () => {
     const [rating, setRating] = useState(null)
+    const [hover, setHover] = useState(null)
     return (
         <div>
             {[...Array(5)].map((star,index) =>{
@@ -15,6 +16,7 @@ const StarRating = () => {
                         name="rating"
                         value={ratingValue} 
                         onClick={() => setRating(ratingValue)}
+                        
                         />
                     <bsIcons.BsFillStarFill 
                         className="star" 
