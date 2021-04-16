@@ -9,9 +9,19 @@ const StarRating = () => {
     const [hover, setHover] = useState(null)
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+      /*   e.preventDefault(); */
         
     }
+
+  const messages = {
+    "1": "I just hate it. ",
+    "2": "I dont like it.",
+    "3": "It is awesome.",
+    "4": "I just like it.", 
+    "5": "I just love it."
+  };
+
+
     return (
         <div className="container flex-col">
             
@@ -38,13 +48,12 @@ const StarRating = () => {
                                 </label>
                             </div>
                         )
-                    
                     })}
                 </div>
                 {rating ? (
                 <>
                     <div className="flex">
-                    <header>You rated this {rating} stars.</header>
+                    <header>{messages[rating]}</header>
                 </div>
                     <div className="textarea">
                         <textarea type="text" cols="30" placeholder="Describe youe experience..."/>
@@ -64,6 +73,7 @@ const StarRating = () => {
 
 export default StarRating
                         
+                    
             
 
 
