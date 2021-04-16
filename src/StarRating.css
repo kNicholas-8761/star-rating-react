@@ -1,0 +1,19 @@
+.container {
+  border: 1px solid white;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+}
+
+textarea {
+  font-size: 2rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+.flex-col {
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+}
