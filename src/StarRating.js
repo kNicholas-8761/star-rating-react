@@ -1,6 +1,10 @@
 import React, {useState} from 'react'
 import * as bsIcons from "react-icons/bs";
 import * as tiIcons from "react-icons/ti";
+import { ImAngry } from "react-icons/im";
+import * as faIcons from "react-icons/fa";
+import * as biIcons from "react-icons/bi";
+
 import './App.css'
 import './StarRating.css'
 
@@ -14,12 +18,20 @@ const StarRating = () => {
     }
 
   const messages = {
-    "1": "I just hate it. ",
-    "2": "I dont like it.",
-    "3": "It is awesome.",
-    "4": "I just like it.", 
-    "5": "I just love it."
+    "1": "I just hate it ",
+    "2": "I dont like it ",
+    "3": "It is awesome ",
+    "4": "I just like it ", 
+    "5": "I just love it "
   };
+
+  const icons = {
+    "1": <ImAngry size='30'/>,
+    "2": <biIcons.BiAngry size='30'/>,
+    "3": <faIcons.FaRegLaughBeam size='30'/>,
+    "4": <biIcons.BiCool size='30'/>,
+    "5":  <faIcons.FaGrinHearts size='30'/>
+  }
 
 
     return (
@@ -53,7 +65,7 @@ const StarRating = () => {
                 {rating ? (
                 <>
                     <div className="flex">
-                    <header>{messages[rating]}</header>
+                    <header>{messages[rating]}{icons[rating]}</header>
                 </div>
                     <div className="textarea">
                         <textarea type="text" cols="30" placeholder="Describe youe experience..."/>
