@@ -9,11 +9,11 @@ import './App.css'
 import './StarRating.css'
 
 const StarRating = () => {
-    const [rating, setRating] = useState(null)
-    const [hover, setHover] = useState(null)
+    const [rating, setRating] = useState(null);
+    const [hover, setHover] = useState(null);
+    const[isRated, setisRated] = useState(false);
 
-    const handleSubmit = (e) => {
-      /*   e.preventDefault(); */
+    const handleClick = (e) => {
         
     }
 
@@ -28,7 +28,7 @@ const StarRating = () => {
   const icons = {
     "1": <ImAngry size='30'/>,
     "2": <biIcons.BiAngry size='30'/>,
-    "3": <faIcons.FaRegLaughBeam size='30'/>,
+    "3": <faIcons.FaRegLaughBeam size='60'/>,
     "4": <biIcons.BiCool size='30'/>,
     "5":  <faIcons.FaGrinHearts size='30'/>
   }
@@ -73,12 +73,15 @@ const StarRating = () => {
                     <div className="btn">
                      <button 
                         type="submit" 
-                        onSubmit={handleSubmit}>POST
-                    </button>
+                        onClick={handleClick}>POST</button>
                 </div>
                 </>): null}
                 
             </form>
+            <div>
+                <button>EDIT</button>
+                <header>Thanks for your feedback!</header>
+            </div>
         </div>
     )
 }
