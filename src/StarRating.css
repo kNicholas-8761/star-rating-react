@@ -1,9 +1,23 @@
 .container {
+  position: relative;
   border: 1px solid #444;
   padding: 2rem 3rem;
   border-radius: 1rem;
   background: #111;
-
+}
+.container .text{
+  font-size: 45px;
+   color: #666; 
+   font-weight: 500;
+}
+.container .edit-btn{
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  font-size: 16px;
+   color: #666; 
+   font-weight: 500;
+   cursor: pointer;
 }
 
 textarea {
