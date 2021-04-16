@@ -43,23 +43,31 @@ const StarRating = () => {
                 </div>
                 {rating ? (
                 <>
-                    <div className="container flex">
-                    <tiIcons.TiTick size="60"/>         
-                    <p>Thanks! You rated this {rating} stars. Would you like to add feedback?</p>
+                    <div className="flex">
+                    <header>You rated this {rating} stars.</header>
+                </div>
+                    <div className="textarea">
+                        <textarea type="text" cols="30" placeholder="Describe youe experience..."/>
                     </div>
-                    <textarea type="text" cols="35" rows="5" placeholder="Enter feedback here . :)"/>
-                    <button type="submit" onSubmit={handleSubmit}>Submit</button>
+                    <div className="btn">
+                     <button 
+                        type="submit" 
+                        onSubmit={handleSubmit}>POST
+                    </button>
+                </div>
                 </>): null}
                 
             </form>
-            
         </div>
     )
 }
 
-
 export default StarRating
                         
+            
+
+
+
 
 
             
