@@ -1,0 +1,101 @@
+.container {
+  background-color: #9dd2ea;
+  position: relative;
+  border: 1px solid #444;
+  padding: 2rem 2rem;
+  margin: 0 1rem;
+  border-radius: 1rem;
+  background: #111;
+
+  .text {
+    font-size: 35px;
+    color: #666;
+    font-weight: 500;
+  }
+
+  .edit-btn {
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .flex-col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: center;
+
+    .expression {
+      position: absolute;
+      top: 104px;
+      left: 20rem;
+    }
+  }
+
+  textarea {
+    font-size: 2rem;
+  }
+
+  .star {
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  form {
+    header {
+      width: 100%;
+      font-size: 35px;
+      color: #fe7;
+      font-weight: 500;
+      margin: 5px 0 50px 0;
+      text-align: center;
+      transition: all 0, 2s ease;
+    }
+    .textarea {
+      height: 100px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .textarea textarea {
+      height: 100px;
+      width: 100%;
+      outline: none;
+      border: 1px solid #333;
+      background: #222;
+      padding: 10px;
+      font-size: 17px;
+      color: #eee;
+      resize: none;
+    }
+    .btn {
+      height: 45px;
+      width: 100%;
+      margin: 15px auto;
+    }
+    .btn button {
+      height: 100%;
+      width: 100%;
+      border: 1px solid #444;
+      background: #222;
+      color: #999;
+      font-size: 20px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn button:hover {
+      background: #1b1b1b;
+    }
+  }
+}
+
+
+ 

@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import * as bsIcons from "react-icons/bs";
 import { ImAngry } from "react-icons/im";
 import * as faIcons from "react-icons/fa";
-import * as biIcons from "react-icons/bi";
 
-import "./App.css";
-import "./StarRating.css";
+import "./App.scss";
+import "./StarRating.scss";
 
 const StarRating = () => {
   const [rating, setRating] = useState(null);
@@ -13,8 +12,6 @@ const StarRating = () => {
   const [isRated, setIsRated] = useState(false);
   const [feedback, setFeedback] = useState("");
 
-
-    
   const messages = {
     1: "I just hate it ",
     2: "I dont like it ",
@@ -25,17 +22,19 @@ const StarRating = () => {
 
   const icons = {
     1: <ImAngry size="30" />,
-    2: <biIcons.BiAngry size="30" />,
-    3: <faIcons.FaRegLaughBeam size="60" />,
-    4: <biIcons.BiCool size="30" />,
+    2: <faIcons.FaRegAngry size="30" />,
+    3: <faIcons.FaRegLaughBeam size="30" />,
+    4: <faIcons.FaRegSmileWink size="30" />,
     5: <faIcons.FaGrinHearts size="30" />,
   };
 
   return (
     <div className="container flex-col">
       {isRated ? (
-      <div className="post">
-          <div className="edit-btn" onClick={() => setIsRated(false)}>EDIT</div>
+        <div className="post">
+          <div className="edit-btn" onClick={() => setIsRated(false)}>
+            EDIT
+          </div>
           <header className="text">Thanks for rating!</header>
         </div>
       ) : (
@@ -54,7 +53,7 @@ const StarRating = () => {
                     />
                     <bsIcons.BsFillStarFill
                       className="star"
-                      size="100"
+                      size="60"
                       color={
                         ratingValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"
                       }
@@ -70,11 +69,8 @@ const StarRating = () => {
             <>
               <div className="flex">
                 <header>
-                    <div>
-                    {messages[rating]}
-                    {icons[rating]}
-                    </div>
-                  
+                  {messages[rating]}
+                  <span className="expression">{icons[rating]}</span>
                 </header>
               </div>
               <div className="textarea">
@@ -87,9 +83,7 @@ const StarRating = () => {
                 />
               </div>
               <div className="btn">
-                <button onClick={() => setIsRated(true)}>
-                  POST
-                </button>
+                <button onClick={() => setIsRated(true)}>POST</button>
               </div>
             </>
           ) : null}
